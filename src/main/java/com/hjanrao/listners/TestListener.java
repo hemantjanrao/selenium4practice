@@ -1,4 +1,4 @@
-package com.hjanrao;
+package com.hjanrao.listners;
 
 import com.hjanrao.report.AllureManager;
 import org.apache.logging.log4j.LogManager;
@@ -7,6 +7,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import static java.lang.String.*;
+
 
 public class TestListener implements ITestListener {
 
@@ -14,12 +16,12 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        logger.info("Starting test => " + result.getName());
+        logger.info(format("Starting %s",result.getName()));
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        logger.info("Finishing test  => " + result.getName());
+        logger.info(format("Finishing %s", result.getName()));
     }
 
     @Override
@@ -39,11 +41,12 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
+        //empty
     }
 
     @Override
     public void onFinish(ITestContext context) {
-
+        //empty
     }
 
     private void failTest(ITestResult iTestResult) {

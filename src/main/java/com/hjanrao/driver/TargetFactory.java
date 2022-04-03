@@ -6,7 +6,7 @@ import static com.hjanrao.config.ConfigurationManager.configuration;
 
 public class TargetFactory {
 
-    public WebDriver createInstance(String browser) throws Exception {
+    public WebDriver createInstance(String browser) throws IllegalStateException {
         Target target = Target.valueOf(configuration().target().toUpperCase());
         WebDriver webdriver;
 
@@ -18,7 +18,7 @@ public class TargetFactory {
                 webdriver = null;
                 break;
             default:
-                throw new Exception("ERROR");
+                throw new IllegalStateException("ERROR");
         }
 
         return webdriver;

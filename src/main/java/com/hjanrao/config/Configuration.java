@@ -19,4 +19,7 @@ public interface Configuration extends Config {
 
     @Key("browser")
     String browser();
+
+    @Key("timeout")
+    int timeout();
 }

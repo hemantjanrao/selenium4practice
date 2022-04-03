@@ -1,6 +1,6 @@
 package com.hjanrao.test;
 
-import com.hjanrao.BaseTest;
+import com.hjanrao.base.BaseTest;
 import com.hjanrao.driver.DriverManager;
 import com.hjanrao.driver.TargetFactory;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static com.hjanrao.config.ConfigurationManager.configuration;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestDriver extends BaseTest {
 
@@ -21,7 +22,10 @@ public class TestDriver extends BaseTest {
 
     @Test
     public void testDriver(){
-        DriverManager.getDriver().get(configuration().url());
-    }
+        WebDriver driver = DriverManager.getDriver();
+        driver.get(configuration().url());
 
+        assertThat(driver.getCurrentUrl()).isEqualTo("http://automationpractice.com/index.php");
+
+    }
 }

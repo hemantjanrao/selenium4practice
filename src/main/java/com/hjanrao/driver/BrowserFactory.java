@@ -21,7 +21,7 @@ public enum BrowserFactory {
             chromeOptions.addArguments(START_MAXIMIZED);
             chromeOptions.addArguments("--disable-infobars");
             chromeOptions.addArguments("--disable-notifications");
-            chromeOptions.setHeadless(false);
+            chromeOptions.setHeadless(true);
             return chromeOptions;
         }
     };

@@ -1,3 +1,5 @@
+package com.hjanrao;
+
 import com.hjanrao.report.AllureManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,12 +14,12 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        // empty
+        logger.info("Starting test => " + result.getName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        // empty
+        logger.info("Finishing test  => " + result.getName());
     }
 
     @Override
@@ -37,12 +39,11 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        // empty
     }
 
     @Override
     public void onFinish(ITestContext context) {
-        // empty
+
     }
 
     private void failTest(ITestResult iTestResult) {

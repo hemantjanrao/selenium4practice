@@ -1,3 +1,5 @@
+package com.hjanrao;
+
 import com.hjanrao.driver.DriverManager;
 import com.hjanrao.report.AllureManager;
 import org.testng.annotations.AfterMethod;

@@ -1,3 +1,6 @@
+package com.hjanrao.test;
+
+import com.hjanrao.BaseTest;
 import com.hjanrao.driver.DriverManager;
 import com.hjanrao.driver.TargetFactory;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static com.hjanrao.config.ConfigurationManager.configuration;
 
-public class TestDriver extends BaseTest{
+public class TestDriver extends BaseTest {
 
     WebDriver driver;
 

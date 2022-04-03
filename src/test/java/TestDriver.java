@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static com.hjanrao.config.ConfigurationManager.configuration;
 
-public class TestDriver {
+public class TestDriver extends BaseTest{
 
     WebDriver driver;
 
@@ -22,8 +22,4 @@ public class TestDriver {
         DriverManager.getDriver().get(configuration().url());
     }
 
-    @AfterTest
-    public void tearDown(){
-        DriverManager.quit();
-    }
 }

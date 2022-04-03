@@ -1,3 +1,4 @@
+import com.hjanrao.driver.DriverManager;
 import com.hjanrao.driver.TargetFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -13,16 +14,16 @@ public class TestDriver {
     @BeforeTest
     public void setUp() throws Exception {
         driver = new TargetFactory().createInstance(configuration().browser());
+        DriverManager.setDriver(driver);
     }
 
     @Test
     public void testDriver(){
-        driver.get(configuration().url());
+        DriverManager.getDriver().get(configuration().url());
     }
 
     @AfterTest
     public void tearDown(){
-        driver.close();
-        driver.quit();
+        DriverManager.quit();
     }
 }

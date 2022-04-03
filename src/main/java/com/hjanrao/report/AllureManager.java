@@ -17,6 +17,7 @@ public class AllureManager {
         AllureEnvironmentWriter.allureEnvironmentWriter(
                 ImmutableMap.<String, String>builder()
                         .put("Test URL", configuration().url())
+                        .put("Browser", configuration().browser())
                         .build()
         );
     }

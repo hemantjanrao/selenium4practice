@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.AbstractDriverOptions;
 
+import static com.hjanrao.config.ConfigurationManager.configuration;
+
 public enum BrowserFactory {
     CHROME {
         @Override
@@ -21,7 +23,7 @@ public enum BrowserFactory {
             chromeOptions.addArguments(START_MAXIMIZED);
             chromeOptions.addArguments("--disable-infobars");
             chromeOptions.addArguments("--disable-notifications");
-            chromeOptions.setHeadless(true);
+            chromeOptions.setHeadless(configuration().headless());
             return chromeOptions;
         }
     };

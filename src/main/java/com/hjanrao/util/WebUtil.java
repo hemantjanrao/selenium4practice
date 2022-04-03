@@ -10,4 +10,9 @@ public class WebUtil {
     public static void click(WebElement element){
         element.click();
     }
+
+    public static void enter(WebElement element, final String text){
+        element.clear();
+        element.sendKeys(text);
+    }
 }

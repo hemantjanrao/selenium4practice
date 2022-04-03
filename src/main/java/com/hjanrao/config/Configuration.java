@@ -22,4 +22,7 @@ public interface Configuration extends Config {
 
     @Key("timeout")
     int timeout();
+
+    @Key("headless")
+    boolean headless();
 }

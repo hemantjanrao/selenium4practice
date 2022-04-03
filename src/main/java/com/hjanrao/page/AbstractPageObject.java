@@ -10,5 +10,4 @@ public abstract class AbstractPageObject {
     protected AbstractPageObject() {
         initElements(new AjaxElementLocatorFactory(DriverManager.getDriver(), configuration().timeout()), this);
     }
-
 }

@@ -16,6 +16,7 @@
         <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
 
         <aspectj.version>1.9.6</aspectj.version>
+        <log4j.version>2.17.1</log4j.version>
         <selenium.version>4.1.2</selenium.version>
         <webdrivermanager.version>5.1.0</webdrivermanager.version>
         <netty.all.version>4.1.75.Final</netty.all.version>
@@ -90,6 +91,25 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

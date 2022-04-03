@@ -1,7 +1,6 @@
 import com.hjanrao.driver.DriverManager;
 import com.hjanrao.driver.TargetFactory;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 

@@ -9,7 +9,6 @@ import org.testng.ITestResult;
 
 import static java.lang.String.*;
 
-
 public class TestListener implements ITestListener {
 
     private static final Logger logger = LogManager.getLogger(TestListener.class);
